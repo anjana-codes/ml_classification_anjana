@@ -1,37 +1,49 @@
-# applied-ml-template
+# ml_classification_anjana
+# Title: HR Employee Attrition Classification Analysis
+**Author:** Anjana Dhakal  
+**Date:** 11/05/2025 
 
-> Use this repo to start a professional Python project.
+## Overview: 
 
-- Additional instructions: See the [pro-analytics-02](https://denisecase.github.io/pro-analytics-02/) guide.
-- Project organization: [STRUCTURE](./STRUCTURE.md)
-- Build professional skills:
-  - **Environment Management**: Every project in isolation
-  - **Code Quality**: Automated checks for fewer bugs
-  - **Documentation**: Use modern project documentation tools
-  - **Testing**: Prove your code works
-  - **Version Control**: Collaborate professionally
+Organizations frequently need to predict employee behavior to support HR decision-making. For example, a company may want to identify employees at risk of leaving to implement targeted retention strategies. Machine learning classification models help automate these decisions by recognizing patterns in historical employee data.  
 
----
+This project demonstrates your ability to apply classification modeling techniques to a real-world HR dataset. You will:
 
-## About this Repository
+- Load and explore the IBM HR Analytics Employee Attrition dataset.  
+- Analyze feature distributions, handle categorical variables, and engineer new features.  
+- Select key features that most influence employee attrition.  
+- Train and evaluate classification models (Random Forest and Logistic Regression).  
+- Compare model performance and interpret the drivers of attrition.  
+- Document the analysis and insights in a structured Jupyter Notebook.  
+- Conduct a peer review of a classmate’s project.  
 
-Starter files for the example labs:
 
-- notebooks/example01 folder
-- notebooks/example02 folder
+## Project Objectives
 
-## Folders for Projects
+- **Explore Data:** Load the dataset, inspect for missing values or anomalies, and visualize feature distributions.  
+- **Prepare Data:** Clean the data, encode categorical variables, normalize numerical features, and engineer relevant features (e.g., Tenure-to-Promotion Ratio).  
+- **Select Features:** Identify the most impactful predictors of attrition using feature importance and domain knowledge.  
+- **Train & Evaluate Models:** Build classification models (Random Forest, Logistic Regression), assess performance using accuracy, precision, recall, F1-score, and confusion matrices.  
+- **Compare Approaches:** Benchmark different models to determine which best predicts attrition and interpret their results.  
+- **Reflect & Document:** Summarize insights, discuss challenges, and provide actionable recommendations for HR interventions.  
 
-Each project will be completed in its own folder.
 
-- notebooks/project01 folder:
-  - ml01.ipynb - COMPLETE THIS
-  - ml01.py - working script with just the code
-  - README.md - instructions - modify this to present your lab project
+## ## Key Findings
 
----
+- **Top Drivers of Attrition:** Overtime, age, tenure-to-promotion ratio, monthly income, and job satisfaction are the most influential predictors of employee attrition.  
+- **Model Performance:** Logistic Regression outperformed Random Forest on this dataset, achieving higher precision, recall, and F1-score for predicting the minority class (employees likely to leave).  
+- **Imbalanced Data Challenge:** High class imbalance (84% retention) made it difficult to detect actual attrition cases, highlighting the importance of class balancing or sampling techniques.  
+- **Actionable Insights for HR:** Focusing on employees with high overtime, low satisfaction, and delayed promotions can help HR target retention strategies effectively.  
+- **Interpretability:** Using a limited set of high-impact features simplifies the model, making predictions easier to explain to stakeholders.  
 
-## WORKFLOW 1. Set Up Machine
+## Project Files
+
+- **[Jupyter Notebook](https://github.com/anjana-codes/ml_classification_anjana/blob/main/notebooks/classification_anjana.ipynb)
+- **[Peer Review]
+
+
+## Set Up
+## 1. Set Up Machine
 
 Proper setup is critical.
 Complete each step in the following guide and verify carefully.
@@ -40,7 +52,7 @@ Complete each step in the following guide and verify carefully.
 
 ---
 
-## WORKFLOW 2. Set Up Project
+## 2. Set Up Project
 
 After verifying your machine is set up, set up a new Python project by copying this template.
 Complete each step in the following guide.
@@ -71,7 +83,7 @@ source .venv/bin/activate
 
 ---
 
-## WORKFLOW 3. Daily Workflow
+## 3. Daily Workflow
 
 Please ensure that the prior steps have been verified before continuing.
 When working on a project, we open just that project in VS Code.
@@ -110,54 +122,6 @@ git add .
 uv run pytest
 ```
 
-NOTE: The second `git add .` ensures any automatic fixes made by Ruff or pre-commit are included before testing or committing.
-Running `uv run pre-commit run --all-files` twice may be helpful if the first time doesn't pass. 
-
-<details>
-<summary>Click to see a note on best practices</summary>
-
-`uvx` runs the latest version of a tool in an isolated cache, outside the virtual environment.
-This keeps the project light and simple, but behavior can change when the tool updates.
-For fully reproducible results, or when you need to use the local `.venv`, use `uv run` instead.
-
-</details>
-
-### 3.3 Build Project Documentation
-
-Make sure you have current doc dependencies, then build your docs, fix any errors, and serve them locally to test.
-
-```shell
-uv run mkdocs build --strict
-uv run mkdocs serve
-```
-
-- After running the serve command, the local URL of the docs will be provided. To open the site, press **CTRL and click** the provided link (at the same time) to view the documentation. On a Mac, use **CMD and click**.
-- Press **CTRL c** (at the same time) to stop the hosting process.
-
-### 3.4 Execute
-
-This project includes demo code.
-Run the demo Python modules to confirm everything is working.
-
-In VS Code terminal, run:
-
-```shell
-uv run python notebooks/project01/ml01.py
-```
-
-A new window with charts should appear. Close the window to finish the execution. 
-If this works, your project is ready! If not, check:
-
-- Are you in the right folder? (All terminal commands are to be run from the root project folder.)
-- Did you run the full `uv sync --extra dev --extra docs --upgrade` command?
-- Are there any error messages? (ask for help with the exact error)
-
-## Update this README as you work
-
-Add commands to run additional scripts as you work through the course (update the path and file name as needed).
-
----
-
 ### 3.5 Git add-commit-push to GitHub
 
 Anytime we make working changes to code is a good time to git add-commit-push to GitHub.
@@ -181,3 +145,11 @@ With a working version safe in GitHub, start making changes to the code.
 Before starting a new session, remember to do a `git pull` and keep your tools updated.
 
 Each time forward progress is made, remember to git add-commit-push.
+
+## References
+
+- Dataset: (https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
+
+- Scikit-learn documentation: https://scikit-learn.org
+
+- Seaborn visualization library: https://seaborn.pydata.org
