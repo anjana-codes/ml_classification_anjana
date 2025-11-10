@@ -1,46 +1,65 @@
 # ml_classification_anjana
-# Title: HR Employee Attrition Classification Analysis
+# Title: Heart Disease Classification Project
 **Author:** Anjana Dhakal  
-**Date:** 11/05/2025 
+**Date:** November 10, 2025
 
 ## Overview: 
 
-Organizations frequently need to predict employee behavior to support HR decision-making. For example, a company may want to identify employees at risk of leaving to implement targeted retention strategies. Machine learning classification models help automate these decisions by recognizing patterns in historical employee data.  
+Healthcare providers often rely on predictive models to identify heart disease risks early, enabling timely interventions. This project uses machine learning classification to predict heart disease presence from the UCI Heart Disease Dataset (Cleveland database), which includes 303 samples and 13 clinical features like age, sex, chest pain type, blood pressure, and cholesterol. The target is binarized (0: no disease, 1: disease present) for binary classification.
+This analysis showcases classification techniques applied to a medical dataset. Key steps include:
 
-This project demonstrates your ability to apply classification modeling techniques to a real-world HR dataset. You will:
-
-- Load and explore the IBM HR Analytics Employee Attrition dataset.  
-- Analyze feature distributions, handle categorical variables, and engineer new features.  
-- Select key features that most influence employee attrition.  
-- Train and evaluate classification models (Random Forest and Logistic Regression).  
-- Compare model performance and interpret the drivers of attrition.  
-- Document the analysis and insights in a structured Jupyter Notebook.  
-- Conduct a peer review of a classmate’s project.  
+- Loading and exploring the dataset for patterns and anomalies.
+- Preprocessing: Handling missing values, encoding categoricals, scaling numerics, and binarizing the target.
+- Selecting clinically relevant features.
+- Training and evaluating Logistic Regression and Random Forest models.
+- Comparing performance metrics and interpreting results for healthcare insights.
+- Documenting findings in a Jupyter Notebook with reflections on challenges and improvements.
 
 
 ## Project Objectives
 
 - **Explore Data:** Load the dataset, inspect for missing values or anomalies, and visualize feature distributions.  
-- **Prepare Data:** Clean the data, encode categorical variables, normalize numerical features, and engineer relevant features (e.g., Tenure-to-Promotion Ratio).  
-- **Select Features:** Identify the most impactful predictors of attrition using feature importance and domain knowledge.  
-- **Train & Evaluate Models:** Build classification models (Random Forest, Logistic Regression), assess performance using accuracy, precision, recall, F1-score, and confusion matrices.  
-- **Compare Approaches:** Benchmark different models to determine which best predicts attrition and interpret their results.  
-- **Reflect & Document:** Summarize insights, discuss challenges, and provide actionable recommendations for HR interventions.  
+- **Prepare Data:** Clean missing values, encode categorical variables, scale numerical features, and engineer the binary target. 
+- **Select Features:** Choose impactful predictors (e.g., age, chest pain type, max heart rate) based on domain knowledge and exploratory analysis.  
+- **Train & Evaluate Models:** Implement Logistic Regression and Random Forest, measure accuracy, precision, recall, F1-score, and visualize confusion matrices.
+- **Compare Approaches:** Benchmark models to identify the best performer and discuss interpretability vs. performance trade-offs.  
+- **Reflect & Document:** Summarize insights, address challenges like class imbalance, and suggest HR-like interventions for patient risk management.  
 
 
-## ## Key Findings
+## Key Findings
 
-- **Top Drivers of Attrition:** Overtime, age, tenure-to-promotion ratio, monthly income, and job satisfaction are the most influential predictors of employee attrition.  
-- **Model Performance:** Logistic Regression outperformed Random Forest on this dataset, achieving higher precision, recall, and F1-score for predicting the minority class (employees likely to leave).  
-- **Imbalanced Data Challenge:** High class imbalance (84% retention) made it difficult to detect actual attrition cases, highlighting the importance of class balancing or sampling techniques.  
-- **Actionable Insights for HR:** Focusing on employees with high overtime, low satisfaction, and delayed promotions can help HR target retention strategies effectively.  
-- **Interpretability:** Using a limited set of high-impact features simplifies the model, making predictions easier to explain to stakeholders.  
+Summary table :
 
-## Project Files
+| Model               | Dataset | Accuracy | Precision | Recall | F1-Score |
+|--------------------|---------|---------|-----------|--------|----------|
+| Logistic Regression | Train   | 0.848   | 0.854     | 0.807  | 0.830    |
+| Logistic Regression | Test    | 0.833   | 0.846     | 0.786  | 0.815    |
+| Random Forest       | Train   | 1.000   | 1.000     | 1.000  | 1.000    |
+| Random Forest       | Test    | 0.850   | 0.880     | 0.786  | 0.830    |
 
-- **[Jupyter Notebook](https://github.com/anjana-codes/ml_classification_anjana/blob/main/notebooks/classification_anjana.ipynb)
-- **[Peer Review]
 
+- **Top Drivers of Attrition:** Chest pain type (cp), maximum heart rate (thalach), ST depression (oldpeak), and exercise-induced angina (exang) are the strongest predictors, with older age, higher cholesterol, and elevated blood pressure also contributing significantly. 
+- **Model Performance:** Random Forest slightly edged out Logistic Regression on test accuracy (85% vs. 83%) and F1-score (0.83 vs. 0.81), but Logistic Regression offers better interpretability for clinical use. Both models show low overfitting risk. 
+- **Imbalanced Data Challenge:** Mild class imbalance (54% no disease vs. 46% disease) was managed via stratified splitting, but recall highlights potential misses in detecting diseased cases—critical for medical applications.
+- **Actionable Insights for Healthcare:** Prioritize screening for patients with asymptomatic chest pain (cp=4), low max heart rate, or high ST depression to improve early detection and reduce false negatives.  
+- **Interpretability:** Using a concise set of 13 clinical features ensures models are explainable to stakeholders, balancing accuracy with practical deployment.  
+
+## Project links
+
+First dataset
+
+-  **Dataset:** [Dataset](https://archive.ics.uci.edu/dataset/45/heart+disease)
+- **GitHub:** [github link](https://github.com/anjana-codes/ml_classification_anjana)
+- **Classification Notebook:** [classification_anjana.ipynb](https://github.com/anjana-codes/ml_classification_anjana/blob/main/notebooks/classification_anjana.ipynb)   
+- **Peer Review Notes:** [peer_review.md](https://github.com/anjana-codes/ml_classification_anjana/blob/main/notebooks/peer_review.md)   
+- **Repository Overview:** [README.md](https://github.com/anjana-codes/ml_classification_anjana/blob/main/README.md)
+  
+Second dataset
+   
+ - **Dataset:** [Dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
+ - **GitHub:** [github link](https://github.com/anjana-codes/ml_classification_anjana)
+ - **Classification Notebook:** [classification1_anjana.ipynb](https://github.com/anjana-codes/ml_classification_anjana/blob/main/notebooks/classification1_anjana.ipynb) 
+ - **Repository Overview:** [README.md](https://github.com/anjana-codes/ml_classification_anjana/blob/main/notebooks/README.md)
 
 ## Set Up
 ## 1. Set Up Machine
@@ -145,11 +164,5 @@ With a working version safe in GitHub, start making changes to the code.
 Before starting a new session, remember to do a `git pull` and keep your tools updated.
 
 Each time forward progress is made, remember to git add-commit-push.
+ 
 
-## References
-
-- Dataset: (https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
-
-- Scikit-learn documentation: https://scikit-learn.org
-
-- Seaborn visualization library: https://seaborn.pydata.org

@@ -3,6 +3,9 @@
 **Author:** Anjana Dhakal  
 **Date:** 11/05/2025 
 
+**Dataset:** [Dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
+**GitHub:** [github link](https://github.com/anjana-codes/ml_classification_anjana)
+
 ## Overview: 
 
 Organizations frequently need to predict employee behavior to support HR decision-making. For example, a company may want to identify employees at risk of leaving to implement targeted retention strategies. Machine learning classification models help automate these decisions by recognizing patterns in historical employee data.  
@@ -28,18 +31,13 @@ This project demonstrates your ability to apply classification modeling techniqu
 - **Reflect & Document:** Summarize insights, discuss challenges, and provide actionable recommendations for HR interventions.  
 
 
-## ## Key Findings
+## Key Findings
 
 - **Top Drivers of Attrition:** Overtime, age, tenure-to-promotion ratio, monthly income, and job satisfaction are the most influential predictors of employee attrition.  
 - **Model Performance:** Logistic Regression outperformed Random Forest on this dataset, achieving higher precision, recall, and F1-score for predicting the minority class (employees likely to leave).  
 - **Imbalanced Data Challenge:** High class imbalance (84% retention) made it difficult to detect actual attrition cases, highlighting the importance of class balancing or sampling techniques.  
 - **Actionable Insights for HR:** Focusing on employees with high overtime, low satisfaction, and delayed promotions can help HR target retention strategies effectively.  
 - **Interpretability:** Using a limited set of high-impact features simplifies the model, making predictions easier to explain to stakeholders.  
-
-## Project Files
-
-- **[Jupyter Notebook](https://github.com/anjana-codes/ml_classification_anjana/blob/main/notebooks/classification_anjana.ipynb)
-- **[Peer Review]
 
 
 ## Set Up
