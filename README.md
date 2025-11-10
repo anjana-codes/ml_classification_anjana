@@ -59,7 +59,7 @@ Second dataset
  - **Dataset:** [Dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
  - **GitHub:** [github link](https://github.com/anjana-codes/ml_classification_anjana)
  - **Classification Notebook:** [classification1_anjana.ipynb](https://github.com/anjana-codes/ml_classification_anjana/blob/main/notebooks/classification1_anjana.ipynb) 
- - **Repository Overview:** [README.md](https://github.com/anjana-codes/ml_classification_anjana/blob/main/docs/README.md)
+ - **Repository Overview:** [README.md](https://github.com/anjana-codes/ml_classification_anjana/blob/main/docs/README.Md)
 
 ## Set Up
 ## 1. Set Up Machine
