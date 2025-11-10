@@ -15,4 +15,4 @@ Model evaluation is thorough and well-presented, with detailed metrics (Accuracy
 ## 4. Reflection Quality
 Reflections are insightful, highlighting key findings such as the dominance of `odor` as a predictor and the effectiveness of tree-based models. The author demonstrates a clear understanding of the data, modeling process, and results interpretation.
 
-**Overall:** This notebook is highly professional, well-documented, and demonstrates strong analytical and modeling skills. Awesome work! 
+**Overall:** This notebook is highly professional, well-documented, and demonstrates strong analytical and modeling skills. Excellent work! 
