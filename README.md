@@ -61,6 +61,26 @@ Second dataset
  - **Classification Notebook:** [classification1_anjana.ipynb](https://github.com/anjana-codes/ml_classification_anjana/blob/main/notebooks/classification1_anjana.ipynb) 
  - **Repository Overview:** [README.md](https://github.com/anjana-codes/ml_classification_anjana/blob/main/docs/README.Md)
 
+## Project Folder 
+
+```
+ml_classification_anjana/
+│
+├── data/
+│   ├── HR-Employee-Attrition.csv
+│   └── processed.cleveland.data
+│
+├── docs/
+│   └── README.md (project description of this dataset HR-Employee-Attrition)
+│
+├── notebooks/
+│   ├── classification_anjana.ipynb
+│   ├── classification1_anjana.ipynb
+│   └── peer_review.md
+│
+└── README.md(project description of this dataset processed.cleveland)
+```
+
 ## Set Up
 ## 1. Set Up Machine
 
